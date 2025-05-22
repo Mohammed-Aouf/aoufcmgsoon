@@ -1,0 +1,149 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm Peachy/Coral Theme (Inspired by image) */
+    --background-start-hsl: 30 100% 97%;  /* Light peachy cream at the top/far */
+    --background-mid-hsl: 15 95% 90%;   /* Mid peachy pink */
+    --background-end-hsl: 0 90% 85%;    /* Deeper coral/sunset orange at the bottom/near */
+
+    --foreground-hsl: 20 10% 20%;     /* Dark brownish-grey for text */
+    
+    --card-background-hsl: 0 0% 100%;   /* White for cards/buttons initially */
+    --card-foreground-hsl: var(--foreground-hsl);
+
+    --popover-background-hsl: 0 0% 100%;
+    --popover-foreground-hsl: var(--foreground-hsl);
+
+    --primary-hsl: 350 85% 55%;        /* A vibrant coral/red for primary actions */
+    --primary-foreground-hsl: 0 0% 100%; /* White text on primary */
+
+    --secondary-hsl: 20 50% 92%;       /* Light peachy-grey for secondary elements */
+    --secondary-foreground-hsl: var(--foreground-hsl);
+
+    --muted-hsl: 25 60% 90%;
+    --muted-foreground-hsl: 20 10% 45%;
+
+    --accent-hsl: 25 100% 60%;         /* Bright orange/apricot accent */
+    --accent-foreground-hsl: 20 10% 10%;
+
+    --destructive-hsl: 0 70% 50%;
+    --destructive-foreground-hsl: 0 0% 100%;
+
+    --border-hsl: 20 30% 80%;          /* Soft peachy border */
+    --input-hsl: 15 40% 95%;           /* Light peachy input background */
+    --ring-hsl: 350 85% 60%;           /* Coral for focus rings */
+    
+    --radius: 0.5rem;
+
+    /* Converted HSL to CSS variables */
+    --background: hsl(var(--background-start-hsl)); /* Fallback, gradient applied to body */
+    --foreground: hsl(var(--foreground-hsl));
+    --card: hsl(var(--card-background-hsl));
+    --card-foreground: hsl(var(--card-foreground-hsl));
+    --popover: hsl(var(--popover-background-hsl));
+    --popover-foreground: hsl(var(--popover-foreground-hsl));
+    --primary: hsl(var(--primary-hsl));
+    --primary-foreground: hsl(var(--primary-foreground-hsl));
+    --secondary: hsl(var(--secondary-hsl));
+    --secondary-foreground: hsl(var(--secondary-foreground-hsl));
+    --muted: hsl(var(--muted-hsl));
+    --muted-foreground: hsl(var(--muted-foreground-hsl));
+    --accent: hsl(var(--accent-hsl));
+    --accent-foreground: hsl(var(--accent-foreground-hsl));
+    --destructive: hsl(var(--destructive-hsl));
+    --destructive-foreground: hsl(var(--destructive-foreground-hsl));
+    --border: hsl(var(--border-hsl));
+    --input: hsl(var(--input-hsl));
+    --ring: hsl(var(--ring-hsl));
+    
+    /* Chart colors */
+    --chart-1: hsl(350 80% 60%);
+    --chart-2: hsl(20 90% 65%);
+    --chart-3: hsl(40 85% 55%);
+    --chart-4: hsl(0 75% 60%);
+    --chart-5: hsl(330 70% 50%);
+
+    /* Sidebar colors - adapt to the warm theme */
+    --sidebar-background: hsl(25 90% 96%); 
+    --sidebar-foreground: hsl(var(--foreground-hsl));
+    --sidebar-primary: hsl(var(--primary-hsl)); 
+    --sidebar-primary-foreground: hsl(var(--primary-foreground-hsl));
+    --sidebar-accent: hsl(15 80% 90%);
+    --sidebar-accent-foreground: hsl(var(--foreground-hsl));
+    --sidebar-border: hsl(var(--border-hsl));
+    --sidebar-ring: hsl(var(--ring-hsl));
+  }
+
+  .dark {
+    /* Dark Midnight Blue Theme */
+    --background-start-hsl: 220 40% 8%;
+    --background-mid-hsl: 230 35% 12%;
+    --background-end-hsl: 240 30% 15%;
+    --foreground-hsl: 220 25% 90%;
+    --card-background-hsl: 230 30% 10%;
+    --popover-background-hsl: 230 30% 10%;
+    --primary-hsl: 205 90% 50%;
+    --primary-foreground-hsl: 220 20% 95%;
+    --secondary-hsl: 220 30% 20%;
+    --muted-hsl: 220 20% 25%;
+    --accent-hsl: 195 100% 50%;
+    --border-hsl: 220 25% 25%;
+    --input-hsl: 220 25% 18%;
+    --ring-hsl: 205 90% 55%;
+
+    /* Converted HSL to CSS variables for .dark */
+    --background: hsl(var(--background-start-hsl));
+    --foreground: hsl(var(--foreground-hsl));
+    --card: hsl(var(--card-background-hsl));
+    --card-foreground: hsl(var(--foreground-hsl)); /* Corrected from previous state */
+    --popover: hsl(var(--popover-background-hsl));
+    --popover-foreground: hsl(var(--foreground-hsl)); /* Corrected from previous state */
+    --primary: hsl(var(--primary-hsl));
+    --primary-foreground: hsl(var(--primary-foreground-hsl));
+    --secondary: hsl(var(--secondary-hsl));
+    --secondary-foreground: hsl(var(--foreground-hsl)); /* Corrected from previous state */
+    --muted: hsl(var(--muted-hsl));
+    --muted-foreground: hsl(220 15% 55%); /* Specific to dark */
+    --accent: hsl(var(--accent-hsl));
+    --accent-foreground: hsl(220 30% 10%); /* Specific to dark */
+    --destructive: hsl(0 62.8% 30.6%);
+    --destructive-foreground: hsl(0 0% 98%);
+    --border: hsl(var(--border-hsl));
+    --input: hsl(var(--input-hsl));
+    --ring: hsl(var(--ring-hsl));
+    
+    --chart-1: hsl(205 80% 50%); 
+    --chart-2: hsl(180 70% 45%);
+    --chart-3: hsl(260 60% 55%);
+    --chart-4: hsl(220 75% 60%);
+    --chart-5: hsl(300 65% 50%);
+
+    --sidebar-background: hsl(225 30% 9%);
+    --sidebar-foreground: hsl(220 25% 90%);
+    --sidebar-primary: hsl(205 90% 50%);
+    --sidebar-primary-foreground: hsl(220 20% 95%);
+    --sidebar-accent: hsl(220 30% 18%);
+    --sidebar-accent-foreground: hsl(220 25% 90%);
+    --sidebar-border: hsl(220 25% 25%);
+    --sidebar-ring: hsl(205 90% 55%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply text-foreground;
+    background-image: radial-gradient(ellipse at 50% 80%, 
+      hsl(var(--background-end-hsl)) 0%, 
+      hsl(var(--background-mid-hsl)) 40%, 
+      hsl(var(--background-start-hsl)) 100%
+    );
+    font-family: var(--font-geist-sans);
+  }
+}
