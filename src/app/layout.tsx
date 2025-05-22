@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Blue Yard', // Updated title
-  description: 'Will it be Utopia, or Oblivion?', // Updated description
+  title: 'Aouf Mohammed', // Updated title
+  description: 'Coming Soon...', // Updated description
 };
 
 export default function RootLayout({
